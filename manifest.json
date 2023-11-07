@@ -1,0 +1,33 @@
+{
+  "version": 1,
+  "locale": ".UTF-8",
+  "metadata": {
+    "appmode": "python-streamlit",
+    "entrypoint": "streamlit_app"
+  },
+  "python": {
+    "version": "3.9.6",
+    "package_manager": {
+      "name": "pip",
+      "version": "23.3.1",
+      "package_file": "requirements.txt"
+    }
+  },
+  "files": {
+    "requirements.txt": {
+      "checksum": "2ceb2300da3c2f29fbdef0859ad5d9f9"
+    },
+    "app.ipynb": {
+      "checksum": "8e07fee373d29ee828808a0b33ff7961"
+    },
+    "data.csv": {
+      "checksum": "2a2b735d156bfba8121565e20f2bd8b6"
+    },
+    "data.xlsx": {
+      "checksum": "2d7fd8f4fdc068d7875710d494e6ad3c"
+    },
+    "streamlit_app.py": {
+      "checksum": "82d27a5d014b9e1403f6b9c0a6ad4b98"
+    }
+  }
+}
