@@ -1,0 +1,14 @@
+Caption
+* Percentage change/share/price not interpretable or not calculable
+** Percentage change > 999.9 %
+*** Provisional data
+1 = Since 2002: including electricity, returned goods and goods for processing without change of ownership
+2 = Since 2012 (imports): country of origin instead of country of production
+
+1801 - Cocoa beans, whole or broken, raw or roasted
+Period [1,2]	Commercial partner	Import			Export			
+		Quantity (kg)	Value (CHF)	Value +/- %	Quantity (kg)	Value (CHF)	Value +/- %	
+2022	                  Afghanistan	9	132	*			*	
+	                  Australia			*	210	2,993	-13.4	
+	                  Austria	141	2,574	-61.4			-100.0	
+	                  Belgium	44,441	271,424	-12.2	19,040	14,011	*	

@@ -1,0 +1,115 @@
+Caption
+* Percentage change/share/price not interpretable or not calculable
+** Percentage change > 999.9 %
+*** Provisional data
+1 = Since 2002: including electricity, returned goods and goods for processing without change of ownership
+2 = Since 2012 (imports): country of origin instead of country of production
+
+0901.11 - Coffee (excl. roasted and decaffeinated)
+Period [1,2]	Commercial partner	Import			Export			
+		Quantity (kg)	Value (CHF)	Value +/- %	Quantity (kg)	Value (CHF)	Value +/- %	
+2022	                  Amer. Virgin	94,940	216,231	*			*	
+	                  Argentina	6	63	-98.0			*	
+	                  Australia	347	5,447	-95.8	0	11	-52.2	
+	                  Austria	9,005	106,414	78.6	13,888	92,484	70.2	
+	                  Belgium	120,086	669,780	28.0	1,086,264	6,572,245	156.3	
+	                  Bolivia	28,644	203,371	49.9			*	
+	                  Brazil	55,713,918	264,702,852	88.0			*	
+	                  Burundi	1,872	7,597	-17.1			*	
+	                  Cameroon	25,103	68,405	92.2			*	
+	                  Canada	19,108	100,485	**	982	11,728	463.0	
+	                  Central Africa	19,128	131,221	**			*	
+	                  China	1,119,513	4,910,770	70.0			-100.0	
+	                  Colombia	32,589,648	202,507,106	46.0	1	1	*	
+	                  Congo, Rep. of	344,460	3,450,672	28.0			*	
+	                  Congo (RDC)	39,760	220,918	-1.8			*	
+	                  Costa Rica	12,418,351	85,194,094	26.4	1	1	0.0	
+	                  Côte d'Ivoire	8	40	-99.9			*	
+	                  Croatia			-100.0			*	
+	                  Cuba	49,373	261,955	-45.5			*	
+	                  Czechia	50	2,430	7.1			*	
+	                  Denmark	43	980	159.9			-100.0	
+	                  Dominican Rep.	53,823	377,675	483.7			*	
+	                  East Timor	7,200	12,447	*			*	
+	                  Ecuador	68,321	1,274,044	84.8			*	
+	                  Egypt			-100.0	1	3	-99.7	
+	                  El Salvador	139,752	783,397	193.3			*	
+	                  Emirates, Arab	1	55	-94.8	165	2,975	44.6	
+	                  Estonia	8	445	-32.8			*	
+	                  Ethiopia	10,850,912	69,492,308	33.9			*	
+	                  Finland	9	251	24.9	0	11	-73.2	
+	                  France	8,023	104,330	-68.8	148,126	751,908	183.5	
+	                  Georgia			*	1,797	11,333	49.8	
+	                  Germany	215,332	1,523,923	-25.8	588,030	2,238,558	-8.5	
+	                  Ghana			-100.0			*	
+	                  Greece	99	2,428	-85.3	2	18	-45.5	
+	                  Guatemala	11,038,606	62,326,372	43.3			*	
+	                  Guinea	277,239	1,784,350	184.2			*	
+	                  Honduras	8,055,465	42,441,723	43.1			*	
+	                  Hong Kong			-100.0	252	2,070	-37.7	
+	                  Hungary	1	204	-47.8			*	
+	                  India	13,867,460	56,351,871	34.3	38,628	213,179	**	
+	                  Indonesia	4,266,404	21,639,371	1.3			*	
+	                  Ireland	4	185	-58.9	11	107	435.0	
+	                  Israel			*	0	1	-97.3	
+	                  Italy	171,885	926,164	42.6	118,449	536,607	**	
+	                  Jamaica	69,078	2,554,523	-25.2			*	
+	                  Japan	42	1,202	405.0	40	1,710	*	
+	                  Jordan	4	147	21.5			*	
+	                  Kenya	3,676,826	35,384,017	9.4			*	
+	                  Korea (South)	1	63	-41.1	17	85	-54.3	
+	                  Kuwait	31	403	*			-100.0	
+	                  Laos			-100.0			*	
+	                  Latvia			-100.0			*	
+	                  Lebanon	4	62	*			*	
+	                  Luxembourg			-100.0			-100.0	
+	                  Madagascar	22	169	*			*	
+	                  Malawi	420	3,093	-2.2			*	
+	                  Malaysia	46	832	-90.4			-100.0	
+	                  Malta			*	0	1	-94.4	
+	                  Mexico	5,240,081	29,231,721	27.1			*	
+	                  Morocco			*	2	6	200.0	
+	                  Myanmar	56,894	469,155	**			*	
+	                  Nepal	13,636	168,690	-35.7			*	
+	                  Netherlands	26,805	139,118	36.4	159,682	742,362	-53.9	
+	                  Nicaragua	9,996,924	47,622,051	37.1			*	
+	                  North Macedonia	6	79	*			*	
+	                  Norway	300	4,656	-7.8			-100.0	
+	                  Oman	250	1,403	*			-100.0	
+	                  Panama	1,920	95,512	38.9			*	
+	                  Papua	149,409	396,334	22.0			*	
+	                  Peru	6,359,938	32,657,442	56.4	0	1	*	
+	                  Philippines	4	111	-96.4			*	
+	                  Poland	23	563	62.7	180	1,039	-98.6	
+	                  Portugal	4,594	25,690	**			-100.0	
+	                  Qatar			-100.0	3,628	59,531	*	
+	                  Réunion			*	1	5	-16.7	
+	                  Romania	5	335	532.1	5	168	-97.9	
+	                  Russia	0	10	*	1,585	12,238	292.4	
+	                  Rwanda	27,910	178,476	8.1			*	
+	                  Saudi Arabia	10	150	*	421	7,413	-72.4	
+	                  Senegal			*			-100.0	
+	                  Serbia			*			-100.0	
+	                  Sierra Leone	437,814	1,051,013	-36.3			*	
+	                  Singapore	19,237	42,646	227.3			-100.0	
+	                  Slovakia	310	2,600	-5.5	382	1,165	*	
+	                  Slovenia			-100.0			-100.0	
+	                  South Africa	244	2,955	**			-100.0	
+	                  Spain	158,639	498,101	116.1	5,017	11,109	-96.3	
+	                  Sri Lanka			-100.0			*	
+	                  St Kitts			*			-100.0	
+	                  Sweden	16	128	-94.4	20	61	-56.4	
+	                  Taiwan	11	214	-17.1			-100.0	
+	                  Tanzania	462,401	1,688,581	2.4			*	
+	                  Thailand	1,642	16,966	-30.6			*	
+	                  Togo	2,979	5,503	-95.2			*	
+	                  Türkiye	5	248	-95.1	3	18	-83.3	
+	                  Uganda	3,292,931	9,131,520	41.8			-100.0	
+	                  Ukraine			*			-100.0	
+	                  United Kingdom	77,626	310,384	-64.5	11,198	22,536	-74.0	
+	                  USA	212,901	9,116,502	0.1	1,374	14,958	**	
+	                  Viet Nam	17,324,770	38,666,050	42.3	2	100	-70.8	
+	                  Yemen	50	879	-99.7			*	
+	                  Zambia	100	553	535.6			*	
+	                  Zimbabwe	85,742	651,000	-31.1			*	
+

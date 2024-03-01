@@ -1,0 +1,35 @@
+Caption
+* Percentage change/share/price not interpretable or not calculable
+** Percentage change > 999.9 %
+*** Provisional data
+1 = Since 2002: including electricity, returned goods and goods for processing without change of ownership
+2 = Since 2012 (imports): country of origin instead of country of production
+
+1008.50 - Quinoa "Chenopodium quinoa"
+Period [1,2]	Commercial partner	Import			Export			
+		Quantity (kg)	Value (CHF)	Value +/- %	Quantity (kg)	Value (CHF)	Value +/- %	
+2022	                  Argentina	6,000	11,497	*			*	
+	                  Austria	21,900	82,531	41.4			-100.0	
+	                  Belgium	25	98	-66.1			*	
+	                  Bolivia	834,944	2,306,528	27.7			*	
+	                  Bulgaria			-100.0			*	
+	                  Chile	94	2,229	**			*	
+	                  China	43	214	-63.0			*	
+	                  Croatia			-100.0			*	
+	                  Denmark	624	25,436	*			*	
+	                  Ecuador	2,623	13,374	**			*	
+	                  France	32,327	156,418	-30.3	85	769	-96.4	
+	                  Germany	7,178	47,578	0.2	2,365	19,836	4.4	
+	                  India			-100.0			*	
+	                  Italy	1,572	6,725	-17.2	1	12	*	
+	                  Kosovo			-100.0			*	
+	                  Morocco	2	10	-93.1			*	
+	                  Netherlands	2,119	5,407	-83.6			*	
+	                  Pakistan			-100.0			*	
+	                  Peru	260,329	705,995	-40.1			*	
+	                  Poland			-100.0			*	
+	                  Portugal	912	5,436	30.6			*	
+	                  Slovenia			-100.0			*	
+	                  Spain	172	895	*			*	
+	                  United Kingdom	9	59	-6.3			-100.0	
+

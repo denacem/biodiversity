@@ -1,0 +1,7 @@
+﻿Domain Code,Domain,Area Code (M49),Area,Element Code,Element,Item Code (CPC),Item,Year Code,Year,Unit,Value,Flag,Flag Description,Note
+"TCL","Crops and livestock products","036","Australia","5610","Import Quantity","01194","Awesome Fruit","2022","2022","t","2000","A","Official figure",""
+"TCL","Crops and livestock products","036","Australia","5910","Export Quantity","01194","Awesome Fruit","2022","2022","t","3000","A","Official figure",""
+"TCL","Crops and livestock products","040","Austria","5610","Import Quantity","01194","Awesome Fruit","2022","2022","t","3000","A","Official figure",""
+"TCL","Crops and livestock products","040","Austria","5910","Export Quantity","01194","Awesome Fruit","2022","2022","t","5000","A","Official figure",""
+"TCL","Crops and livestock products","056","Belgium","5610","Import Quantity","01194","Awesome Fruit","2022","2022","t","1000","A","Official figure",""
+"TCL","Crops and livestock products","056","Belgium","5910","Export Quantity","01194","Awesome Fruit","2022","2022","t","0","A","Official figure",""
