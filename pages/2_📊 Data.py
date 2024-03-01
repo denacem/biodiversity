@@ -33,7 +33,7 @@ st.dataframe(impex_swiss_data)
 impex_swiss_data["Import Quantity (kg)"] = impex_swiss_data["Import Quantity (kg)"].str.replace(',', '').astype(float)
 
 plt.figure(figsize=(10, 6))
-plt.bar(impex_swiss_data["Commercial partner"], impex_swiss_data["Import Quantity (kg)"].astype(float))
+plt.bar(impex_swiss_data["Trade Partner"], impex_swiss_data["Import Quantity (kg)"].astype(float))
 plt.xlabel("Country")
 plt.ylabel("Value")
 plt.title(f"Impex Swiss Value by Country for {selected_crop.title()}")
@@ -72,7 +72,7 @@ st.write(import_swiss_data)
 fig, ax = plt.subplots(figsize=(10, 8))
 
 # Plot Swiss import quantity on the left side
-ax.barh(import_swiss_data['Commercial partner'], import_swiss_data['Import Quantity (kg)'], color='red', label='Swiss Import Quantity')
+ax.barh(import_swiss_data['Trade Partner'], import_swiss_data['Import Quantity (kg)'], color='red', label='Swiss Import Quantity')
 
 # Set labels and title for Swiss Import
 ax.set_xlabel('Import Quantity (kg)')

@@ -43,7 +43,7 @@ def read_swiss_impex(file_path):
 
     # Rename columns
     impex_data.columns = [
-        "Commercial partner", "Import Quantity (kg)", "Import Value (CHF)", "Import Value +/- %",
+        "Trade Partner", "Import Quantity (kg)", "Import Value (CHF)", "Import Value +/- %",
         "Export Quantity (kg)", "Export Value (CHF)", "Export Value +/- %"
     ]
 
