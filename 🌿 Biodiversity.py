@@ -2,7 +2,7 @@ import streamlit as st
 import pandas as pd
 import locale
 import numpy as np
-import re
+import matplotlib.pyplot as plt
 
 from crop_selector import select_crop
 
@@ -105,18 +105,20 @@ pdf_data['country_code'] = split_columns[2].str.strip()
 result_world_data_merged = pd.merge(result_world_data, pdf_data, left_on='short', right_on='country_code', how='left')
 
 # Fill NaN values in 'amount' with 0
-result_world_data['temporary pdf value'] = result_world_data_merged['amount'].fillna(0)
-result_world_data['temporary pdf value'] = result_world_data['temporary pdf value']
+result_world_data['PDF Factor'] = result_world_data_merged['amount'].fillna(0)
 
-#st.write(type(result_world_data['temporary pdf value'][0]))
+#st.write(type(result_world_data['PDF Factor'][0]))
 
-result_world_data['PDF'] = result_world_data['temporary pdf value'] * result_world_data['Weighted (m^2/kg)']
+result_world_data['PDF'] = result_world_data['PDF Factor'] * result_world_data['Weighted (m^2/kg)']
 
 # Rename columns
 result_world_data = result_world_data.rename(columns={'Area': 'Trade Partner', 'short': 'Code', 'Value_x': 'Import (t)', 'Value_y': 'Yield (m^2/kg)'})
 
 # Reorder the columns
 result_world_data = result_world_data[['Trade Partner', 'Code', 'Import (t)', 'Export (t)', 'Net (t)', 'Yield (m^2/kg)', 'Share (%)', 'Weighted (m^2/kg)', 'PDF']]
+
+#Get top PDF countries
+result_world_data_viz = result_world_data.nlargest(25   , 'PDF')
 
 # Apply the custom formatting function
 result_world_data['Import (t)'] = result_world_data['Import (t)'].apply(format_swiss_number)
@@ -135,6 +137,14 @@ st.dataframe(result_world_data)
 st.write(f"Total Sum: {format_swiss_number(positive_net_sum)}")
 st.write(f"Total Share: {format_swiss_number(total_share)}")
 
+# Create the bar plot for impex_world_data
+plt.figure(figsize=(10, 6))
+plt.bar(result_world_data_viz["Trade Partner"], result_world_data_viz["PDF"].astype(float))
+plt.xlabel("Country")
+plt.ylabel("PDF")
+plt.title(f"PDF Value by Country for {selected_crop.title()}")
+plt.xticks(rotation=90)
+st.pyplot(plt)
 
 
 ### Same stuff for Swiss
@@ -184,7 +194,8 @@ impex_swiss_data = pd.merge(impex_swiss_data, yield_data[['Area', 'Value']], lef
 impex_swiss_data['Yield (m^2/kg)'] = impex_swiss_data['Value'].fillna(0)
 
 # Convert "Yield" from 100g/ha to kg/m² and then invert to get m²/kg
-impex_swiss_data['Yield (m^2/kg)'] = 1 / (impex_swiss_data['Yield (m^2/kg)'] / 100)  # 1 / (100g/ha) = kg/m²
+#then it's land use!
+impex_swiss_data['Yield (m^2/kg)'] = 1 / (impex_swiss_data['Yield (m^2/kg)'] / 100000)  # 1 / (100g/ha) = kg/m²
 
 # Replace infinite values with NaN
 impex_swiss_data = impex_swiss_data.replace([np.inf, -np.inf], np.nan)
@@ -201,14 +212,20 @@ impex_swiss_data = pd.merge(impex_swiss_data, countries_data[['Name', 'short']],
 # Now, you can use these two columns for merging
 impex_swiss_data_merged = pd.merge(impex_swiss_data, pdf_data, left_on='short', right_on='country_code', how='left')
 
-# Fill NaN values in 'amount' with 0
-impex_swiss_data['temporary pdf value'] = impex_swiss_data_merged['amount'].fillna(0)
-impex_swiss_data['temporary pdf value'] = impex_swiss_data['temporary pdf value']
+# Filter to just use the current crop
+impex_swiss_data_merged = impex_swiss_data_merged[impex_swiss_data_merged['occupation'].str.contains(crop_type)]
+impex_swiss_data_merged.reset_index(drop=True, inplace=True)
 
-impex_swiss_data['PDF'] = impex_swiss_data['temporary pdf value'] * impex_swiss_data['Weighted (m^2/kg)']
+# Get the PDF factor
+impex_swiss_data['PDF Factor'] = impex_swiss_data_merged['amount']
+
+impex_swiss_data['PDF'] = impex_swiss_data['PDF Factor'] * impex_swiss_data['Weighted (m^2/kg)']
 
 # Reorder the columns
-impex_swiss_data = impex_swiss_data[['Trade Partner', 'Import Quantity (kg)', 'Export Quantity (kg)', 'Net (kg)', 'Yield (m^2/kg)', 'Share (%)', 'Weighted (m^2/kg)', 'PDF']]
+impex_swiss_data = impex_swiss_data[['Trade Partner', 'Import Quantity (kg)', 'Export Quantity (kg)', 'Net (kg)', 'Yield (m^2/kg)', 'Share (%)', 'Weighted (m^2/kg)', 'PDF Factor', 'PDF']]
+
+#Get top PDF countries
+impex_swiss_data_viz = impex_swiss_data.nlargest(25, 'PDF')
 
 # Apply the custom formatting function
 impex_swiss_data['Import Quantity (kg)'] = impex_swiss_data['Import Quantity (kg)'].apply(format_swiss_number)
@@ -218,6 +235,7 @@ impex_swiss_data['Yield (m^2/kg)'] = impex_swiss_data['Yield (m^2/kg)'].apply(fo
 impex_swiss_data['Share (%)'] = impex_swiss_data['Share (%)'].apply(format_swiss_number)
 impex_swiss_data['Weighted (m^2/kg)'] = impex_swiss_data['Weighted (m^2/kg)'].apply(format_swiss_number_sci)
 impex_swiss_data['PDF'] = impex_swiss_data['PDF'].apply(format_swiss_number_sci)
+impex_swiss_data['PDF Factor'] = impex_swiss_data['PDF Factor'].apply(format_swiss_number_sci)
 
 # Show the result
 st.subheader(f"Biodiversity Calculation (Swiss Trade) for {selected_crop.title()}")
@@ -226,3 +244,12 @@ st.dataframe(impex_swiss_data)
 # Display the total sum
 st.write(f"Total Sum: {format_swiss_number(positive_net_sum)}")
 st.write(f"Total Share: {format_swiss_number(total_share)}")
+
+# Create the bar plot for impex_world_data
+plt.figure(figsize=(10, 6))
+plt.bar(impex_swiss_data_viz["Trade Partner"], impex_swiss_data_viz["PDF"].astype(float))
+plt.xlabel("Country")
+plt.ylabel("PDF")
+plt.title(f"PDF Value by Country for {selected_crop.title()}")
+plt.xticks(rotation=90)
+st.pyplot(plt)

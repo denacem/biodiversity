@@ -38,7 +38,7 @@ def read_swiss_impex(file_path):
             if line.startswith("Period"):
                 break
 
-        # Now read the remaining lines into a DataFrame, skip the first line (column names)
+        # Now read the remaining lines into a DataFrame
         impex_data = pd.read_csv(file, delimiter='\t', usecols=[1, 2, 3, 4, 5, 6, 7])
 
     # Rename columns
@@ -46,5 +46,16 @@ def read_swiss_impex(file_path):
         "Trade Partner", "Import Quantity (kg)", "Import Value (CHF)", "Import Value +/- %",
         "Export Quantity (kg)", "Export Value (CHF)", "Export Value +/- %"
     ]
+
+
+    # Remove commas and convert to numeric, handling '*' with errors='coerce'
+    impex_data.iloc[:, 1:] = impex_data.iloc[:, 1:].replace({',': ''}, regex=True).apply(pd.to_numeric, errors='coerce')
+
+
+    st.write("huh", impex_data)
+
+
+    # Handle NaN values as needed (replace with 0, drop rows, etc.)
+    impex_data = impex_data.fillna(0)
 
     return impex_data

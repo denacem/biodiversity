@@ -40,7 +40,7 @@ plt.title(f"Impex Swiss Value by Country for {selected_crop.title()}")
 plt.xticks(rotation=90)
 st.pyplot(plt)
 
-# Separate data into import and export DataFrames (for both world and Swiss)
+# Separate data into import and export DataFrames
 import_world_data = impex_world_data[impex_world_data['Element'] == 'Import Quantity'].nlargest(20, 'Value')
 export_world_data = impex_world_data[impex_world_data['Element'] == 'Export Quantity'].nlargest(20, 'Value')
 import_swiss_data = impex_swiss_data.nlargest(20, 'Import Quantity (kg)')
