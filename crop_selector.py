@@ -51,10 +51,6 @@ def read_swiss_impex(file_path):
     # Remove commas and convert to numeric, handling '*' with errors='coerce'
     impex_data.iloc[:, 1:] = impex_data.iloc[:, 1:].replace({',': ''}, regex=True).apply(pd.to_numeric, errors='coerce')
 
-
-    st.write("huh", impex_data)
-
-
     # Handle NaN values as needed (replace with 0, drop rows, etc.)
     impex_data = impex_data.fillna(0)
 

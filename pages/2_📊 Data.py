@@ -30,7 +30,7 @@ st.dataframe(impex_swiss_data)
 
 # Create the bar plot for impex_swiss_data
 # Remove commas from the "Value" column and convert to float
-impex_swiss_data["Import Quantity (kg)"] = impex_swiss_data["Import Quantity (kg)"].str.replace(',', '').astype(float)
+#impex_swiss_data["Import Quantity (kg)"] = impex_swiss_data["Import Quantity (kg)"].str.replace(',', '').astype(float)
 
 plt.figure(figsize=(10, 6))
 plt.bar(impex_swiss_data["Trade Partner"], impex_swiss_data["Import Quantity (kg)"].astype(float))
