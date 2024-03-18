@@ -3,7 +3,7 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import os
 
-from crop_selector import select_crop
+from select_crop import select_crop
 
 st.set_page_config(layout="wide")
 
