@@ -75,9 +75,6 @@ def calc_biodiversity_world(impex_world_data, countries_data, pdf_data, crop_typ
     result_world_data_merged = result_world_data_merged[result_world_data_merged['occupation'].str.contains(crop_type)]
     result_world_data_merged.reset_index(drop=True, inplace=True)
 
-    st.write("result", result_world_data)
-    st.write("merged", result_world_data_merged)
-
     # Fill NaN values in 'amount' with 0
     #result_world_data['PDF Factor'] = result_world_data_merged['amount']
 
@@ -87,8 +84,6 @@ def calc_biodiversity_world(impex_world_data, countries_data, pdf_data, crop_typ
             if merged_row['country_code'] == country_code:
                 result_world_data.at[index, 'PDF Factor'] = merged_row['amount']
                 break
-
-    st.write("after loop", result_world_data)
 
     #st.write(type(result_world_data['PDF Factor'][0]))
     result_world_data['PDF (PDF/kg)'] = result_world_data['PDF Factor'] * result_world_data['Weighted (m^2/kg)']
@@ -100,7 +95,7 @@ def calc_biodiversity_world(impex_world_data, countries_data, pdf_data, crop_typ
     result_world_data = result_world_data[['Trade Partner', 'Code', 'Import (t)', 'Export (t)', 'Net Export (t)', 'Yield (m^2/kg)', 'Share (%)', 'Weighted (m^2/kg)', 'PDF Factor', 'PDF (PDF/kg)']]
 
     # Get top PDF countries
-    result_world_data_viz = result_world_data.nlargest(25, 'PDF (PDF/kg)')
+    result_world_data_top = result_world_data.nlargest(25, 'PDF (PDF/kg)')
 
     # Calculate total PDF
     total_world_pdf = result_world_data['PDF (PDF/kg)'].sum(skipna=True)
@@ -115,4 +110,4 @@ def calc_biodiversity_world(impex_world_data, countries_data, pdf_data, crop_typ
     result_world_data['PDF Factor'] = result_world_data['PDF Factor'].apply(format_swiss_number_sci)
     result_world_data['PDF (PDF/kg)'] = result_world_data['PDF (PDF/kg)'].apply(format_swiss_number_sci)
 
-    return result_world_data, total_world_pdf, result_world_data_viz
+    return result_world_data, total_world_pdf, result_world_data_top

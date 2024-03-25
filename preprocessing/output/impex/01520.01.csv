@@ -1,0 +1,12 @@
+﻿Domain Code,Domain,Area Code (M49),Area,Element Code,Element,Item Code (CPC),Item,Year Code,Year,Unit,Value,Flag,Flag Description,Note
+"TCL","Crops and livestock products","024","Angola","5610","Import Quantity","01520.01","Cassava, fresh","2022","2022","t","3160.62","A","Official figure",""
+"TCL","Crops and livestock products","024","Angola","5910","Export Quantity","01520.01","Cassava, fresh","2022","2022","t","59.36","I","Imputed value",""
+"TCL","Crops and livestock products","178","Congo","5610","Import Quantity","01520.01","Cassava, fresh","2022","2022","t","12.11","X","Figure from international organizations","Estimated data using trading partners database"
+"TCL","Crops and livestock products","180","Democratic Republic of the Congo","5610","Import Quantity","01520.01","Cassava, fresh","2022","2022","t","47.21","I","Imputed value",""
+"TCL","Crops and livestock products","180","Democratic Republic of the Congo","5910","Export Quantity","01520.01","Cassava, fresh","2022","2022","t","3159.46","X","Figure from international organizations","Estimated data using trading partners database"
+"TCL","Crops and livestock products","418","Lao People's Democratic Republic","5910","Export Quantity","01520.01","Cassava, fresh","2022","2022","t","1951687","X","Figure from international organizations","Estimated data using trading partners database"
+"TCL","Crops and livestock products","426","Lesotho","5610","Import Quantity","01520.01","Cassava, fresh","2022","2022","t","0.02","A","Official figure",""
+"TCL","Crops and livestock products","104","Myanmar","5910","Export Quantity","01520.01","Cassava, fresh","2022","2022","t","17162.75","A","Official figure",""
+"TCL","Crops and livestock products","682","Saudi Arabia","5610","Import Quantity","01520.01","Cassava, fresh","2022","2022","t","0.04","X","Figure from international organizations","Estimated data using trading partners database"
+"TCL","Crops and livestock products","626","Timor-Leste","5610","Import Quantity","01520.01","Cassava, fresh","2022","2022","t","1.77","A","Official figure",""
+"TCL","Crops and livestock products","626","Timor-Leste","5910","Export Quantity","01520.01","Cassava, fresh","2022","2022","t","243.4","A","Official figure",""

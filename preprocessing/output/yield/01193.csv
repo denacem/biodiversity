@@ -1,0 +1,11 @@
+﻿Domain Code,Domain,Area Code (M49),Area,Element Code,Element,Item Code (CPC),Item,Year Code,Year,Unit,Value,Flag,Flag Description,Note
+"QCL","Crops and livestock products","204","Benin","5419","Yield","01193","Fonio","2022","2022","100 g/ha","5315","A","Official figure",""
+"QCL","Crops and livestock products","854","Burkina Faso","5419","Yield","01193","Fonio","2022","2022","100 g/ha","8002","A","Official figure",""
+"QCL","Crops and livestock products","384","Côte d'Ivoire","5419","Yield","01193","Fonio","2022","2022","100 g/ha","12627","E","Estimated value",""
+"QCL","Crops and livestock products","324","Guinea","5419","Yield","01193","Fonio","2022","2022","100 g/ha","8200","A","Official figure",""
+"QCL","Crops and livestock products","624","Guinea-Bissau","5419","Yield","01193","Fonio","2022","2022","100 g/ha","7385","E","Estimated value",""
+"QCL","Crops and livestock products","466","Mali","5419","Yield","01193","Fonio","2022","2022","100 g/ha","5914","A","Official figure",""
+"QCL","Crops and livestock products","562","Niger","5419","Yield","01193","Fonio","2022","2022","100 g/ha","6813","A","Official figure",""
+"QCL","Crops and livestock products","566","Nigeria","5419","Yield","01193","Fonio","2022","2022","100 g/ha","4923","E","Estimated value",""
+"QCL","Crops and livestock products","686","Senegal","5419","Yield","01193","Fonio","2022","2022","100 g/ha","9607","A","Official figure",""
+"QCL","Crops and livestock products","768","Togo","5419","Yield","01193","Fonio","2022","2022","100 g/ha","8598","A","Official figure",""

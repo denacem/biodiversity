@@ -3,13 +3,15 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import os
 
-from select_crop import select_crop
+from select_crop import select_crop, crop_selector, crops_data
 
 st.set_page_config(layout="wide")
 
 st.title("📊 Import / Export and Yield Data")
 
-selected_crop, crop_type, impex_world_data, impex_swiss_data, yield_data = select_crop()
+# Select crop
+selected_crop = crop_selector(crops_data)
+selected_crop_emoji, crop_type, impex_world_data, impex_swiss_data, yield_data = select_crop(selected_crop)
 
 # Display the impex world data using st.dataframe
 st.subheader(f"Impex World Data for {selected_crop.title()}")

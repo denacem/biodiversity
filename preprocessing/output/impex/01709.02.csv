@@ -1,0 +1,8 @@
+﻿Domain Code,Domain,Area Code (M49),Area,Element Code,Element,Item Code (CPC),Item,Year Code,Year,Unit,Value,Flag,Flag Description,Note
+"TCL","Crops and livestock products","152","Chile","5910","Export Quantity","01709.02","Lupins","2022","2022","t","11801.43","A","Official figure",""
+"TCL","Crops and livestock products","159","China","5610","Import Quantity","01709.02","Lupins","2022","2022","t","1060.97","A","Official figure",""
+"TCL","Crops and livestock products","158","China, Taiwan Province of","5610","Import Quantity","01709.02","Lupins","2022","2022","t","1060.97","A","Official figure",""
+"TCL","Crops and livestock products","258","French Polynesia","5610","Import Quantity","01709.02","Lupins","2022","2022","t","61.75","A","Official figure",""
+"TCL","Crops and livestock products","516","Namibia","5610","Import Quantity","01709.02","Lupins","2022","2022","t","757.1","A","Official figure",""
+"TCL","Crops and livestock products","516","Namibia","5910","Export Quantity","01709.02","Lupins","2022","2022","t","10.05","A","Official figure",""
+"TCL","Crops and livestock products","682","Saudi Arabia","5610","Import Quantity","01709.02","Lupins","2022","2022","t","48.8","X","Figure from international organizations","Estimated data using trading partners database"

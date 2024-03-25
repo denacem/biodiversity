@@ -1,0 +1,5 @@
+﻿Domain Code,Domain,Area Code (M49),Area,Element Code,Element,Item Code (CPC),Item,Year Code,Year,Unit,Value,Flag,Flag Description,Note
+"TCL","Crops and livestock products","052","Barbados","5610","Import Quantity","01241.01","String beans","2022","2022","t","0.01","A","Official figure",""
+"TCL","Crops and livestock products","288","Ghana","5910","Export Quantity","01241.01","String beans","2022","2022","t","0.01","X","Figure from international organizations","Estimated data using trading partners database"
+"TCL","Crops and livestock products","328","Guyana","5610","Import Quantity","01241.01","String beans","2022","2022","t","0.01","A","Official figure",""
+"TCL","Crops and livestock products","328","Guyana","5910","Export Quantity","01241.01","String beans","2022","2022","t","22.5","I","Imputed value",""
