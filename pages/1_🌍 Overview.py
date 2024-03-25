@@ -17,7 +17,7 @@ st.title('🌍 Overview')
 # Load the lookup tables
 countries_data = pd.read_csv('./data/countries.csv')
 pdf_data = pd.read_csv('./data/pdf.csv')
-crops_data = pd.read_csv('./data/crops.csv')
+crops_data = pd.read_csv('./data/crops.csv', dtype={"code": str})
 
 # Prepare PDF Data
 pdf_data = prepare_pdf_data(pdf_data)
@@ -28,12 +28,13 @@ all_results = []
 # Loop over crops
 for index, row in crops_data.iterrows():
     crop_data = {}
-    selected_crop_emoji, crop_type, impex_world_data, impex_swiss_data, yield_data = select_crop(row['crop'])
+    selected_crop_emoji, crop_type, impex_world_data, impex_swiss_data, yield_data = select_crop(row['code'])
     result_swiss_data, total_swiss_pdf, result_swiss_data_top = calc_biodiversity_swiss(impex_swiss_data, countries_data, pdf_data, crop_type, yield_data)
     result_world_data, total_world_pdf, result_world_data_top = calc_biodiversity_world(impex_world_data, countries_data, pdf_data, crop_type, yield_data)
     
     # Store the data for the current crop in a dictionary
-    crop_data['crop'] = row['crop']
+    crop_data['code'] = row['code']
+    crop_data['title'] = row['title']
     crop_data['selected_crop_emoji'] = selected_crop_emoji
     crop_data['crop_type'] = crop_type
     crop_data['result_swiss_data'] = result_swiss_data
@@ -51,7 +52,7 @@ for index, row in crops_data.iterrows():
 #st.write(all_results)
 
 # Extract total Swiss and total world PDFs for each crop
-crop_names = [crop['crop'] for crop in all_results]
+crop_names = [crop['title'] for crop in all_results]
 total_swiss_pdfs = [crop['total_swiss_pdf'] for crop in all_results]
 total_world_pdfs = [crop['total_world_pdf'] for crop in all_results]
 
@@ -76,7 +77,7 @@ swiss_top_dataframes = [crop_data['result_swiss_data_top']['PDF Factor'] for cro
 world_top_dataframes = [crop_data['result_world_data_top']['PDF Factor'] for crop_data in all_results]
 
 # Concatenate the lists of dataframes
-combined_top_data = pd.concat(swiss_top_dataframes + world_top_dataframes, axis=1, keys=[crop_data['crop'] for crop_data in all_results])
+combined_top_data = pd.concat(swiss_top_dataframes + world_top_dataframes, axis=1, keys=[crop_data['title'] for crop_data in all_results])
 
 st.write(combined_top_data)
 

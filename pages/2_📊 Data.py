@@ -10,11 +10,11 @@ st.set_page_config(layout="wide")
 st.title("📊 Import / Export and Yield Data")
 
 # Select crop
-selected_crop = crop_selector(crops_data)
-selected_crop_emoji, crop_type, impex_world_data, impex_swiss_data, yield_data = select_crop(selected_crop)
+selected_crop_title, selected_crop_code = crop_selector(crops_data)
+selected_crop_emoji, crop_type, impex_world_data, impex_swiss_data, yield_data = select_crop(selected_crop_code)
 
 # Display the impex world data using st.dataframe
-st.subheader(f"Impex World Data for {selected_crop.title()}")
+st.subheader(f"Impex World Data for {selected_crop_title.title()}")
 st.dataframe(impex_world_data)
 
 # Create the bar plot for impex_world_data
@@ -22,12 +22,12 @@ plt.figure(figsize=(10, 6))
 plt.bar(impex_world_data["Area"], impex_world_data["Value"].astype(float))
 plt.xlabel("Country")
 plt.ylabel("Value")
-plt.title(f"Impex World Value by Country for {selected_crop.title()}")
+plt.title(f"Impex World Value by Country for {selected_crop_title.title()}")
 plt.xticks(rotation=90)
 st.pyplot(plt)
 
 # Display the impex swiss data using st.dataframe
-st.subheader(f"Impex Swiss Data for {selected_crop.title()}")
+st.subheader(f"Impex Swiss Data for {selected_crop_title.title()}")
 st.dataframe(impex_swiss_data)
 
 # Create the bar plot for impex_swiss_data
@@ -38,7 +38,7 @@ plt.figure(figsize=(10, 6))
 plt.bar(impex_swiss_data["Trade Partner"], impex_swiss_data["Import Quantity (kg)"].astype(float))
 plt.xlabel("Country")
 plt.ylabel("Value")
-plt.title(f"Impex Swiss Value by Country for {selected_crop.title()}")
+plt.title(f"Impex Swiss Value by Country for {selected_crop_title.title()}")
 plt.xticks(rotation=90)
 st.pyplot(plt)
 
@@ -59,7 +59,7 @@ ax.barh(export_world_data['Area'], export_world_data['Value'], color='orange', l
 # Set labels and title for world
 ax.set_xlabel('Quantity (t)')
 ax.set_ylabel('Country')
-ax.set_title('World Import and Export of ' + selected_crop.title() + ' by Country (top countries)')
+ax.set_title('World Import and Export of ' + selected_crop_title.title() + ' by Country (top countries)')
 
 # Display legend for world
 ax.legend()
@@ -79,7 +79,7 @@ ax.barh(import_swiss_data['Trade Partner'], import_swiss_data['Import Quantity (
 # Set labels and title for Swiss Import
 ax.set_xlabel('Import Quantity (kg)')
 ax.set_ylabel('Country')
-ax.set_title('Swiss Import of ' + selected_crop.title() + ' by Country (top countries)')
+ax.set_title('Swiss Import of ' + selected_crop_title.title() + ' by Country (top countries)')
 
 # Display legend for Swiss
 ax.legend()
@@ -88,7 +88,7 @@ ax.legend()
 st.pyplot(plt)
 
 # Display the yield data using st.dataframe
-st.subheader(f"Yield Data for {selected_crop.title()}")
+st.subheader(f"Yield Data for {selected_crop_title.title()}")
 st.dataframe(yield_data)
 
 # Create the bar plot for yield_data
@@ -96,6 +96,6 @@ plt.figure(figsize=(10, 6))
 plt.bar(yield_data["Area"], yield_data["Value"].astype(float))
 plt.xlabel("Country")
 plt.ylabel("Value")
-plt.title(f"Yield Value by Country for {selected_crop.title()}")
+plt.title(f"Yield Value by Country for {selected_crop_title.title()}")
 plt.xticks(rotation=90)
 st.pyplot(plt)

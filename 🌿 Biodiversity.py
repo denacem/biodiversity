@@ -15,11 +15,11 @@ st.set_page_config(layout='wide')
 st.title('🌿 Biodiversity')
 
 # Select crop
-selected_crop = crop_selector(crops_data)
-selected_crop_emoji, crop_type, impex_world_data, impex_swiss_data, yield_data = select_crop(selected_crop)
+selected_crop_title, selected_crop_code = crop_selector(crops_data)
+selected_crop_emoji, crop_type, impex_world_data, impex_swiss_data, yield_data = select_crop(selected_crop_code)
 
 # Display the selected crop
-st.write(f"Selected: {selected_crop_emoji + ' ' + selected_crop.title()}")
+st.write(f"Selected: {selected_crop_emoji + ' ' + selected_crop_title.title()}")
 st.write(f"Type of Crop: {crop_type.title()}")
 
 
@@ -35,7 +35,7 @@ pdf_data = prepare_pdf_data(pdf_data)
 result_swiss_data, total_swiss_pdf, result_swiss_data_top = calc_biodiversity_swiss(impex_swiss_data, countries_data, pdf_data, crop_type, yield_data)
 
 # Show the result
-st.subheader(f'Biodiversity Calculation (Swiss Trade) for {selected_crop.title()}')
+st.subheader(f'Biodiversity Calculation (Swiss Trade) for {selected_crop_title.title()}')
 st.dataframe(result_swiss_data)
 
 # Display the total sum
@@ -47,7 +47,7 @@ plt.figure(figsize=(10, 6))
 plt.bar(result_swiss_data_top['Trade Partner'], result_swiss_data_top['PDF (PDF/kg)'].astype(float))
 plt.xlabel('Country')
 plt.ylabel('PDF (PDF/kg)')
-plt.title(f'PDF Value by Country for {selected_crop.title()}')
+plt.title(f'PDF Value by Country for {selected_crop_title.title()}')
 plt.xticks(rotation=90)
 st.pyplot(plt)
 
@@ -56,7 +56,7 @@ st.pyplot(plt)
 result_world_data, total_world_pdf, result_world_data_top = calc_biodiversity_world(impex_world_data, countries_data, pdf_data, crop_type, yield_data)
 
 # Show the result
-st.subheader(f'Biodiversity Calculation (World Trade) for {selected_crop.title()}')
+st.subheader(f'Biodiversity Calculation (World Trade) for {selected_crop_title.title()}')
 st.dataframe(result_world_data)
 
 # Display the total sum
@@ -69,13 +69,13 @@ plt.figure(figsize=(10, 6))
 plt.bar(result_world_data_top['Trade Partner'], result_world_data_top['PDF (PDF/kg)'].astype(float))
 plt.xlabel('Country')
 plt.ylabel('PDF (PDF/kg)')
-plt.title(f'PDF Value by Country for {selected_crop.title()}')
+plt.title(f'PDF Value by Country for {selected_crop_title.title()}')
 plt.xticks(rotation=90)
 st.pyplot(plt)
 
 ### Comparison
 
-st.subheader(f'Biodiversity Comparison Swiss/World for {selected_crop.title()}')
+st.subheader(f'Biodiversity Comparison Swiss/World for {selected_crop_title.title()}')
 
 # Create a figure and two subplots
 fig, (ax1, ax2) = plt.subplots(1, 2, figsize=(10, 6))
